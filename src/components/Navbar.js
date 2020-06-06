@@ -6,7 +6,7 @@ const Navbar = () => {
     const {learns} = useContext(LearningContext); 
     return (
             <div>
-                <p>You have {learns.length} learns to get through...</p>
+                <p>You've been learning {learns.length} things!</p>
             </div>
         
         );

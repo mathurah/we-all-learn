@@ -13,9 +13,8 @@ const NewLearnForm = ({}) => {
     return (
         <form onSubmit={handleSubmit}>
             <input type="date" placeholder="date" value={date} onChange={(e) => setDate(e.target.value)} required/>
-
             
-            <textarea name="textarea" rows="4" cols="5" placeholder="what you learned" value={description} onChange={(e) => setDescription(e.target.value)} required/>
+            <textarea name="textarea" rows="5"  placeholder="what you learned" value={description} onChange={(e) => setDescription(e.target.value)} required/>
            
             {/* storing what the user enters in a local state */}
             {/* gets us the value inside the input form */}

@@ -20,7 +20,7 @@ body {
     margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 150%;
   color: #14132c; 
   background-color: white;
@@ -30,7 +30,7 @@ body {
 
  h2 {
   display: block; 
-  font-size: 1.5em !important;
+  font-size: 1.5em ;
   font-family: 'Lora', serif;
   color: #590078;
 } 
@@ -73,7 +73,7 @@ a:hover {
 }
 
 form{
-  padding: 20px;
+  padding-top: 20px;
 }
 input[type='text']{
   width: 100%;
@@ -92,22 +92,23 @@ input[type='submit']{
   display: block;
 }
 textarea {
-    display: block; 
-    width: calc(100% - 50px);
-  height: 25px;
-  overflow: hidden;
+width: 80%; 
+height: auto;
   background-color: inherit;
   outline: none;
   border: none;
   resize: none;
-  padding: 6px 0 0 0;
-  margin-top: 2px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
   transition: border-bottom 0.2s;
   cursor: pointer;
+
 }
 
 textarea:focus {
     outline: none;
+    background-color: rgba(239, 228, 247, 0.5);  
     border: none;
     border-bottom: 2px solid #d1d1d1;
   }
