@@ -1,68 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# We All Learn 🤔
 
-## Available Scripts
+## What it's about 🥳
 
-In the project directory, you can run:
+This project is an extension of my [Mathu Learns](http://mathu-learns.netlify.com) project - a tool I built for myself to track the things I'm learning everyday, fetching and updating using the AirTable API. 
 
-### `yarn start`
+After much response, I wanted to make it easy for anyone to record what they're learning every day all in one application, without having to go to any third-party applications. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Not every day needs to be productive or involve shipping code. But every day is about learning something new whether it be about technology, life lessons, and the why - why we do the things we do. Life is short. Let's take everything in, being grateful, and mindful ❤️
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Check it out 💁‍♀️
+**On the website**
+View the site [here](https://we-all-learn.netlify.app/).
 
-### `yarn test`
+**Run it locally**
+Clone the repository, ``npm install``, ``npm start`` and open www.localhost:3000 in the browser. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## How it was made 🛠
+- Using Create React App + React Hooks
+- Context API
+- CSS Animations/Key Frames
+- Shopify Polaris Components
+- Local Storage
