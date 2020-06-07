@@ -2,7 +2,7 @@
 
 ## What it's about 🥳
 
-This project is an extension of my [Mathu Learns](http://mathu-learns.netlify.com) project - a tool I built for myself to track the things I'm learning everyday, fetching and updating using the AirTable API. You can view the source code for this [here].(https://github.com/mathurahravigulan/mathu-learns)
+This project is an extension of my [Mathu Learns](http://mathu-learns.netlify.com) project - a tool I built for myself to track the things I'm learning everyday, fetching and updating using the AirTable API. You can view the source code for this [here.](https://github.com/mathurahravigulan/mathu-learns)
 
 After much response, I wanted to make it easy for anyone to record what they're learning every day all in one application, without having to go to any third-party applications. 
 
