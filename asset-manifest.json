@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/we-all-learn/static/css/main.46ecfeda.chunk.css",
+    "main.css": "/we-all-learn/static/css/main.c32105b0.chunk.css",
     "main.js": "/we-all-learn/static/js/main.1a346d9d.chunk.js",
     "main.js.map": "/we-all-learn/static/js/main.1a346d9d.chunk.js.map",
     "runtime-main.js": "/we-all-learn/static/js/runtime-main.b6882673.js",
@@ -9,17 +9,17 @@
     "static/js/2.2bb28a17.chunk.js": "/we-all-learn/static/js/2.2bb28a17.chunk.js",
     "static/js/2.2bb28a17.chunk.js.map": "/we-all-learn/static/js/2.2bb28a17.chunk.js.map",
     "index.html": "/we-all-learn/index.html",
-    "precache-manifest.817b21769ce6f4750f356c5ce00700eb.js": "/we-all-learn/precache-manifest.817b21769ce6f4750f356c5ce00700eb.js",
+    "precache-manifest.35b1d5e79fb0df75afa41f11ff907ec9.js": "/we-all-learn/precache-manifest.35b1d5e79fb0df75afa41f11ff907ec9.js",
     "service-worker.js": "/we-all-learn/service-worker.js",
     "static/css/2.977fc06e.chunk.css.map": "/we-all-learn/static/css/2.977fc06e.chunk.css.map",
-    "static/css/main.46ecfeda.chunk.css.map": "/we-all-learn/static/css/main.46ecfeda.chunk.css.map",
+    "static/css/main.c32105b0.chunk.css.map": "/we-all-learn/static/css/main.c32105b0.chunk.css.map",
     "static/js/2.2bb28a17.chunk.js.LICENSE.txt": "/we-all-learn/static/js/2.2bb28a17.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b6882673.js",
     "static/css/2.977fc06e.chunk.css",
     "static/js/2.2bb28a17.chunk.js",
-    "static/css/main.46ecfeda.chunk.css",
+    "static/css/main.c32105b0.chunk.css",
     "static/js/main.1a346d9d.chunk.js"
   ]
 }
