@@ -4,30 +4,36 @@ import _ from "lodash";
 export const LearningContext = createContext();
 
 const LearningContextProvider = props => {
-  const [learns, setLearns] = useState([
-    //we can delete this if you want i just had it to test
+  const [learns, setLearns] = useState(
+    JSON.parse(localStorage.getItem("learns")),
+    []
+
+    // () => {
+    //   //this whole function I don't think is being called bc it's not showing up in the console
+    //   console.log("hi");
+    //   const localData = localStorage.getItem('learns', JSON.parse(learns)); //I think there's a problem with this part
+    //   return localData ? JSON.parse(localData) : [];
+    // }
     // { date: "May 29", description: "learned how to play the ukulele", id: 1 }
     // { date: "May 21", description: "learned how to play the ukulele", id: 2 }
     // { date: "May 11", description: "learned how to play the ukulele", id: 3 }
-  ]);
+  );
 
-  // const storage = () => {
-  //   return (
-  //     localData ? JSON.parse(localData): []
-  //   );
-  // }
-
-  useEffect(() =>{
-    window.localStorage.setItem('learns', JSON.stringify(learns))
-  },[learns]
-  ) 
+  useEffect(() => {
+    localStorage.setItem("learns", JSON.stringify(learns));
+    // console.log(JSON.parse(JSON.stringify(learns)));
+    console.log(learns);
+    console.log(localStorage.getItem("learns"));
+    //console.log(localData) this does not work
+  }, [learns]);
 
   const addLearn = (date, description) => {
     console.log(learns);
     setLearns(
       _.orderBy(
         [...learns, { date, description, id: uuidv4() }],
-        ["date"], ["desc"]
+        ["date"],
+        ["desc"]
       )
     );
   };
@@ -46,6 +52,7 @@ const LearningContextProvider = props => {
       if (learns[i].id === id) {
         newLearns[i].description = newText;
         setLearns(newLearns);
+        localStorage.setItem("learns", JSON.stringify(newLearns));
       }
     }
   };
