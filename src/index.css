@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   font-size: 20px;
+  background-color: #f4f6f8;
 }
 
 .info {
@@ -91,7 +92,7 @@ input[type='submit']{
   margin: auto;
   margin-top: 20px;
   background: white;
-  border: 0; 
+  border: 0.5; 
   border-radius: 5px;
   padding: 10px 20px;
   display: block;
