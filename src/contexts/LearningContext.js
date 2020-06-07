@@ -6,7 +6,6 @@ export const LearningContext = createContext();
 const LearningContextProvider = props => {
   const [learns, setLearns] = useState(
     JSON.parse(localStorage.getItem("learns")), [
-          { date: "May 29", description: "learned how to play the ukulele", id: 1 }
     ]
 
     // () => {
