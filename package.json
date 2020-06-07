@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "we-all-learn",
   "version": "0.1.0",
   "private": true,
