@@ -8,7 +8,7 @@ const LearningList = props => {
   return (
     <div>
       <ul>
-        {learns.map(learn => {
+        {learns?.map(learn => {
           return <LearnDetails learn={learn} key={learn.id} />;
         })}
       </ul>

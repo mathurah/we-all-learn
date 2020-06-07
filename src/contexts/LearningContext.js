@@ -21,6 +21,10 @@ const LearningContextProvider = props => {
 
   //Function to add learns
   const addLearn = (date, description) => {
+    if (!learns) {
+      setLearns([{ date, description, id: uuidv4() }]);
+      return;
+    }
     setLearns(
       _.orderBy(
         [...learns, { date, description, id: uuidv4() }],
@@ -32,7 +36,7 @@ const LearningContextProvider = props => {
 
   //Looping through the array and excluding the id that you deleted, and later updating the state
   const removeLearn = id => {
-    setLearns(learns.filter(learn => learn.id !== id));
+    setLearns(learns?.filter(learn => learn.id !== id));
   };
 
   //1. Check ids and find the index of the item you want to edit
