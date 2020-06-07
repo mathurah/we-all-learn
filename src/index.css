@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   font-size: 20px;
+  background-color: #f4f6f8 !important;
 }
 
 .info {
@@ -25,6 +26,7 @@ body {
   line-height: 150%;
   color: #14132c; 
   background-color: #f4f6f8 !important;
+  height: 100%; 
 }
 
 
