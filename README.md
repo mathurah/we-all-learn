@@ -13,7 +13,7 @@ Not every day needs to be productive or involve shipping code. But every day is 
 View the site [here](https://we-all-learn.netlify.app/).
 
 **Run it locally**: 
-Clone the repository, ``npm install``, ``npm start`` and open www.localhost:3000 in the browser. 
+Clone the repository, ``npm install``, ``npm start`` and open http://localhost:3000/ in the browser. 
 
 ## How it was made 🛠
 - Using Create React App + React Hooks
