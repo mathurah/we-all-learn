@@ -26,7 +26,7 @@ body {
   line-height: 150%;
   color: #14132c; 
   background-color: #f4f6f8 !important;
-  height: 100%; 
+  min-height: 100%; 
 }
 
 
