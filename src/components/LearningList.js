@@ -1,14 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, {useContext } from "react";
 import "../index.css";
 import { LearningContext } from "../contexts/LearningContext";
 import LearnDetails from "./LearnDetails";
 
-const LearningList = props => {
+const LearningList = (props) => {
   const { learns } = useContext(LearningContext);
   return (
     <div>
       <ul>
-        {learns?.map(learn => {
+        {learns?.map((learn) => {
           return <LearnDetails learn={learn} key={learn.id} />;
         })}
       </ul>

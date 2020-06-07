@@ -3,12 +3,12 @@ import { v4 as uuidv4 } from "uuid";
 import _ from "lodash";
 export const LearningContext = createContext();
 
-//This file manages all the data 
-const LearningContextProvider = props => {
+//This file manages all the data
+const LearningContextProvider = (props) => {
   const [learns, setLearns] = useState(
     //Retrieving from storage and storing as an object
-    JSON.parse(localStorage.getItem("learns")), [
-    ]
+    JSON.parse(localStorage.getItem("learns")),
+    []
     // { date: "May 29", description: "learned how to play the ukulele", id: 1 }
     // { date: "May 11", description: "learned how to play the ukulele", id: 3 }
   );
@@ -35,12 +35,12 @@ const LearningContextProvider = props => {
   };
 
   //Looping through the array and excluding the id that you deleted, and later updating the state
-  const removeLearn = id => {
-    setLearns(learns?.filter(learn => learn.id !== id));
+  const removeLearn = (id) => {
+    setLearns(learns?.filter((learn) => learn.id !== id));
   };
 
   //1. Check ids and find the index of the item you want to edit
-  //2. create a new temporary variable of newLearns and new description 
+  //2. create a new temporary variable of newLearns and new description
   //3. Replace and connect to original
   //4. Set item to update in local storage
   const editLearn = (id, newText) => {
@@ -54,7 +54,6 @@ const LearningContextProvider = props => {
       }
     }
   };
-
 
   return (
     <LearningContext.Provider

@@ -23,7 +23,7 @@ const NewLearnForm = ({}) => {
         />
         </div>
         <div className="col-9">
-          <textarea
+          <textarea className="text_edit"
           name="textarea"
           rows="4"
           cols="5"
@@ -39,7 +39,7 @@ const NewLearnForm = ({}) => {
 
       {/* storing what the user enters in a local state */}
       {/* gets us the value inside the input form */}
-      <input type="submit" className="submit-learn" value="Add what I learned" />
+      <input className="btn" type="submit" className="submit-learn" value="Add what I learned" />
     </form>
   );
 };

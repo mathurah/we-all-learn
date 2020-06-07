@@ -10,13 +10,14 @@ const LearnDetails = ({ learn }) => {
   //Function to render a Text field when editing
   const renderTextField = () => {
     return (
-      <textarea className="text-edit"
+      <textarea
+        className="text_edit"
         name="textarea"
         rows="4"
         cols="5"
         placeholder="what you learned"
         value={description}
-        onChange={e => setDescription(e.target.value)}
+        onChange={(e) => setDescription(e.target.value)}
         required
       />
     );
@@ -24,40 +25,40 @@ const LearnDetails = ({ learn }) => {
 
   return (
     <div className="container mt-5">
-    <AppProvider>
-      <div class="learning-cards">
-        <Card
-          title={learn.date}
-          secondaryFooterActions={[
-            {
-              content: "Delete Entry",
-              destructive: true,
-              onAction: () => removeLearn(learn.id)
+      <AppProvider>
+        <div class="learning-cards">
+          <Card
+            title={learn.date}
+            secondaryFooterActions={[
+              {
+                content: "Delete Entry",
+                destructive: true,
+                onAction: () => removeLearn(learn.id),
+              },
+            ]}
+            primaryFooterAction={
+              !edit
+                ? {
+                    content: "Change what you learned",
+                    onAction: () => {
+                      setEdit(true);
+                    },
+                  }
+                : {
+                    content: "Save changes",
+                    onAction: () => {
+                      editLearn(learn.id, description);
+                      setEdit(false);
+                    },
+                  }
             }
-          ]}
-          primaryFooterAction={
-            !edit
-              ? {
-                  content: "Change what you learned",
-                  onAction: () => {
-                    setEdit(true);
-                  }
-                }
-              : {
-                  content: "Save changes",
-                  onAction: () => {
-                    editLearn(learn.id, description);
-                    setEdit(false);
-                  }
-                }
-          }
-        >
-          <Card.Section>
-            {!edit ? learn.description : renderTextField()}
-          </Card.Section>
-        </Card>
-      </div>
-    </AppProvider>
+          >
+            <Card.Section>
+              {!edit ? learn.description : renderTextField()}
+            </Card.Section>
+          </Card>
+        </div>
+      </AppProvider>
     </div>
   );
 };
