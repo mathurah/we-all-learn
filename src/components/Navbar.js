@@ -18,7 +18,7 @@ const Navbar = () => {
             {learns?.length > 0 && 
                 <h2>I learned {learns?.length} things...</h2>
             }
-            {learns?.length <= 0  && 
+            {(learns?.length <= 0 || !learns )&&
                 <h2>Start learning new things!</h2>
             }
             </div>
