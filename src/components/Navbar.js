@@ -11,7 +11,6 @@ const Navbar = () => {
             <span className="heart-falling">&#10084;</span>
             <span className="heart-falling">&#10084;</span>
             <span className="heart-falling">&#10084;</span>
-            <span className="heart-falling">&#10084;</span>
             </div>
           <div className="row">
             <div className="col">
