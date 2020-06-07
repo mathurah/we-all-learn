@@ -3,32 +3,24 @@ import { v4 as uuidv4 } from "uuid";
 import _ from "lodash";
 export const LearningContext = createContext();
 
+//This file manages all the data 
 const LearningContextProvider = props => {
   const [learns, setLearns] = useState(
+    //Retrieving from storage and storing as an object
     JSON.parse(localStorage.getItem("learns")), [
     ]
-
-    // () => {
-    //   //this whole function I don't think is being called bc it's not showing up in the console
-    //   console.log("hi");
-    //   const localData = localStorage.getItem('learns', JSON.parse(learns)); //I think there's a problem with this part
-    //   return localData ? JSON.parse(localData) : [];
-    // }
     // { date: "May 29", description: "learned how to play the ukulele", id: 1 }
-    // { date: "May 21", description: "learned how to play the ukulele", id: 2 }
     // { date: "May 11", description: "learned how to play the ukulele", id: 3 }
   );
 
   useEffect(() => {
+    //updating the state
+    //storing the local storage, serializing with the json
     localStorage.setItem("learns", JSON.stringify(learns));
-    // console.log(JSON.parse(JSON.stringify(learns)));
-    console.log(learns);
-    console.log(localStorage.getItem("learns"));
-    //console.log(localData) this does not work
   }, [learns]);
 
+  //Function to add learns
   const addLearn = (date, description) => {
-    console.log(learns);
     setLearns(
       _.orderBy(
         [...learns, { date, description, id: uuidv4() }],
@@ -38,13 +30,15 @@ const LearningContextProvider = props => {
     );
   };
 
+  //Looping through the array and excluding the id that you deleted, and later updating the state
   const removeLearn = id => {
     setLearns(learns.filter(learn => learn.id !== id));
   };
-  //so first you need to write a fucntion that checks ids and finds the index of the learn you wanna edit
-  //then you just call useState with all the ... business and just edit the text
-  //for that object at that index
-  //THIS FILE just handles data changes not the visual presentation
+
+  //1. Check ids and find the index of the item you want to edit
+  //2. create a new temporary variable of newLearns and new description 
+  //3. Replace and connect to original
+  //4. Set item to update in local storage
   const editLearn = (id, newText) => {
     let newLearns = learns;
 
@@ -56,8 +50,7 @@ const LearningContextProvider = props => {
       }
     }
   };
-  //for loop to find index -> put the value in a variable
-  //setLearn call with the ... stuff to change the value
+
 
   return (
     <LearningContext.Provider
@@ -68,3 +61,5 @@ const LearningContextProvider = props => {
   );
 };
 export default LearningContextProvider;
+
+//Provider: provides values and passing everything down

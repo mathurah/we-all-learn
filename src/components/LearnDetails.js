@@ -7,6 +7,7 @@ const LearnDetails = ({ learn }) => {
   const { removeLearn, editLearn } = useContext(LearningContext);
   const [edit, setEdit] = useState(false);
   const [description, setDescription] = useState(learn.description);
+  //Function to render a Text field when editing
   const renderTextField = () => {
     return (
       <textarea className="text-edit"
@@ -22,6 +23,7 @@ const LearnDetails = ({ learn }) => {
   };
 
   return (
+    //Shopify card component
     <div className="container mt-5">
     <AppProvider>
       <div class="learning-cards">
