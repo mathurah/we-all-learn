@@ -23,7 +23,6 @@ const LearnDetails = ({ learn }) => {
   };
 
   return (
-    //Shopify card component
     <div className="container mt-5">
     <AppProvider>
       <div class="learning-cards">
