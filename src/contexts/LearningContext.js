@@ -5,8 +5,9 @@ export const LearningContext = createContext();
 
 const LearningContextProvider = props => {
   const [learns, setLearns] = useState(
-    JSON.parse(localStorage.getItem("learns")),
-    []
+    JSON.parse(localStorage.getItem("learns")), [
+          { date: "May 29", description: "learned how to play the ukulele", id: 1 }
+    ]
 
     // () => {
     //   //this whole function I don't think is being called bc it's not showing up in the console
