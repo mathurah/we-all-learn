@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { LearningContext } from "../contexts/LearningContext";
-const NewLearnForm = ({}) => {
+const NewLearnForm = () => {
   const { addLearn } = useContext(LearningContext);
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); //prevents page from being submitted
     addLearn(date, description);
     setDate("");
     setDescription("");
@@ -39,7 +39,7 @@ const NewLearnForm = ({}) => {
 
       {/* storing what the user enters in a local state */}
       {/* gets us the value inside the input form */}
-      <input className="btn" type="submit" className="submit-learn" value="Add what I learned" />
+      <input type="submit"  value="Add what I learned" />
     </form>
   );
 };
