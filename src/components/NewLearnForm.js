@@ -5,7 +5,7 @@ const NewLearnForm = () => {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const handleSubmit = e => {
-    e.preventDefault(); //prevents page from being submitted
+    e.preventDefault(); //prevents page from being refreshed
     addLearn(date, description);
     setDate("");
     setDescription("");
