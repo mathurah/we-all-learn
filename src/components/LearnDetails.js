@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { LearningContext } from "../contexts/LearningContext";
 import { AppProvider, Card } from "@shopify/polaris";
+import "react-quill/dist/quill.snow.css";
 
 // need access to learn inside this component
 const LearnDetails = ({ learn }) => {
@@ -10,15 +11,9 @@ const LearnDetails = ({ learn }) => {
   //Function to render a Text field when editing
   const renderTextField = () => {
     return (
-      <textarea
-        className="text_edit"
-        name="textarea"
-        rows="4"
-        cols="5"
-        placeholder="what you learned"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        required
+      <div
+        className="content-container"
+        dangerouslySetInnerHTML={{ __html: description }}
       />
     );
   };
@@ -27,6 +22,8 @@ const LearnDetails = ({ learn }) => {
     <div className="container mt-5">
       <AppProvider>
         <div class="learning-cards">
+          <div class="date">{learn.date}</div>
+          {/*           
           <Card
             title={learn.date}
             secondaryFooterActions={[
@@ -52,11 +49,21 @@ const LearnDetails = ({ learn }) => {
                     },
                   }
             }
-          >
-            <Card.Section>
+          > */}
+          <div>
+            <div
+              className="content-container"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+            <div className="delete" onClick={() => removeLearn(learn.id)}>
+              delete
+            </div>
+          </div>
+
+          {/* <Card.Section>
               {!edit ? learn.description : renderTextField()}
-            </Card.Section>
-          </Card>
+            </Card.Section> */}
+          {/* </Card> */}
         </div>
       </AppProvider>
     </div>

@@ -19,19 +19,20 @@ const LearningContextProvider = (props) => {
     localStorage.setItem("learns", JSON.stringify(learns));
   }, [learns]);
 
-  //Function to add learns
+  // Function to add learns or combine them if a learn with the same date already exists
   const addLearn = (date, description) => {
-    if (!learns) {
-      setLearns([{ date, description, id: uuidv4() }]);
-      return;
+    const existingLearnIndex = learns.findIndex((learn) => learn.date === date);
+
+    if (existingLearnIndex !== -1) {
+      // If a learn with the same date exists, combine the descriptions
+      const updatedLearns = [...learns];
+      updatedLearns[existingLearnIndex].description += `\n${description}`;
+      setLearns(_.orderBy(updatedLearns, ["date"], ["desc"]));
+    } else {
+      // If no learn with the same date exists, add a new learn
+      const newLearn = { date, description, id: uuidv4() };
+      setLearns(_.orderBy([...learns, newLearn], ["date"], ["desc"]));
     }
-    setLearns(
-      _.orderBy(
-        [...learns, { date, description, id: uuidv4() }],
-        ["date"],
-        ["desc"]
-      )
-    );
   };
 
   //Looping through the array and excluding the id that you deleted, and later updating the state

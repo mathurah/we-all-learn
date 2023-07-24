@@ -4,8 +4,10 @@ import LearningList from "./components/LearningList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@shopify/polaris/styles.css";
 import "./index.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LearningContextProvider from "./contexts/LearningContext";
-import NewLearnForm from "./components/NewLearnForm";
+import Home from "./Home";
+import NewLogPage from "./components/NewLogPage";
 
 function App() {
   return (
@@ -13,8 +15,12 @@ function App() {
       <div className="container mt-5">
         <LearningContextProvider>
           <Navbar />
-          <NewLearnForm />
-          <LearningList />
+          <Router>
+            <Routes>
+              <Route path="/new" element={<NewLogPage />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
         </LearningContextProvider>
       </div>
     </div>
